@@ -152,20 +152,4 @@ mkdir -p $DEB_INSTALL_ROOT/usr/local/cpanel/whostmgr/addonfeatures
 
 install $SOURCE3 $DEB_INSTALL_ROOT/usr/local/cpanel/whostmgr/addonfeatures/$name
 
-set -x 
-echo VARS
-
-ls -d debian/*
-cat -n debian/ea-php82-runtime.install
-
-
-#mkdir -p $DEB_INSTALL_ROOT/opt/cpanel/ea-php82/root/usr/share/doc/ea-php82-runtime-$version
-
 cp ./LICENSE $DEB_INSTALL_ROOT/opt/cpanel/ea-php82/root/usr/share/doc/ea-php82-runtime
-
-                    
-
-echo "FILELIST"
-echo `pwd`
-find . -type f -print
-
