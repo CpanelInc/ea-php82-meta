@@ -14,7 +14,7 @@
 
 Summary:       Package that installs PHP 8.2
 Name:          %scl_name
-Version:       8.2.1
+Version:       8.2.0
 Vendor:        cPanel, Inc.
 # Doing release_prefix this way for Release allows for OBS-proof versioning, See EA-4590 for more details
 %define        release_prefix 1
@@ -181,5 +181,5 @@ mkdir -p %{buildroot}/opt/cpanel/%{scl}/root/usr/share/locale
 %{_root_sysconfdir}/rpm/macros.%{scl_name_base}-scldevel
 
 %changelog
-* Fri Oct 07 2022 Brian Mendoza <brian.mendoza@cpanel.net> - 8.2.1-1
+* Fri Oct 07 2022 Brian Mendoza <brian.mendoza@cpanel.net> - 8.2.0-1
 - ZC-10359: Initial Build
