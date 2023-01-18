@@ -17,7 +17,7 @@ Name:          %scl_name
 Version:       8.2.1
 Vendor:        cPanel, Inc.
 # Doing release_prefix this way for Release allows for OBS-proof versioning, See EA-4590 for more details
-%define        release_prefix 1
+%define        release_prefix 2
 Release:       %{release_prefix}%{?dist}.cpanel
 Group:         Development/Languages
 License:       GPLv2+
@@ -181,6 +181,9 @@ mkdir -p %{buildroot}/opt/cpanel/%{scl}/root/usr/share/locale
 %{_root_sysconfdir}/rpm/macros.%{scl_name_base}-scldevel
 
 %changelog
+* Mon Jan 09 2023 Brian Mendoza <brian.mendoza@cpanel.net> - 8.2.1-2
+- ZC-10585: Build for C7
+
 * Thu Jan 05 2023 Cory McIntire <cory@cpanel.net> - 8.2.1-1
 - EA-11136: Update ea-php82 from v8.2.0 to v8.2.1
 
