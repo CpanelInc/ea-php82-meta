@@ -11,10 +11,10 @@
 
 Summary:       Package that installs PHP 8.2
 Name:          %scl_name
-Version:       8.2.12
+Version:       8.2.13
 Vendor:        cPanel, Inc.
 # Doing release_prefix this way for Release allows for OBS-proof versioning, See EA-4590 for more details
-%define        release_prefix 1
+%define        release_prefix 2
 Release:       %{release_prefix}%{?dist}.cpanel
 Group:         Development/Languages
 License:       GPLv2+
@@ -178,6 +178,12 @@ mkdir -p %{buildroot}/opt/cpanel/%{scl}/root/usr/share/locale
 %{_root_sysconfdir}/rpm/macros.%{scl_name_base}-scldevel
 
 %changelog
+* Tue Nov 28 2023 Julian Brown <julian.brown@cpanel.net> - 8.2.13-2
+- ZC-11419: Correct Ubuntu build issues
+
+* Thu Nov 23 2023 Cory McIntire <cory@cpanel.net> - 8.2.13-1
+- EA-11823: Update ea-php82 from v8.2.12 to v8.2.13
+
 * Thu Oct 26 2023 Cory McIntire <cory@cpanel.net> - 8.2.12-1
 - EA-11774: Update ea-php82 from v8.2.11 to v8.2.12
 
