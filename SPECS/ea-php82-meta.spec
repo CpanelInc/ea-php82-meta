@@ -11,7 +11,7 @@
 
 Summary:       Package that installs PHP 8.2
 Name:          %scl_name
-Version:       8.2.25
+Version:       8.2.26
 Vendor:        cPanel, Inc.
 # Doing release_prefix this way for Release allows for OBS-proof versioning, See EA-4590 for more details
 %define        release_prefix 1
@@ -178,6 +178,15 @@ mkdir -p %{buildroot}/opt/cpanel/%{scl}/root/usr/share/locale
 %{_root_sysconfdir}/rpm/macros.%{scl_name_base}-scldevel
 
 %changelog
+* Thu Nov 21 2024 Cory McIntire <cory@cpanel.net> - 8.2.26-1
+- EA-12577: Update ea-php82 from v8.2.25 to v8.2.26
+- (Single byte overread with convert.quoted-printable-decode filter). (CVE-2024-11233)
+- (Configuring a proxy in a stream context might allow for CRLF injection in URIs). (CVE-2024-11234)
+- (Integer overflow in the dblib quoter causing OOB writes). (CVE-2024-11236)
+- (Integer overflow in the firebird quoter causing OOB writes). (CVE-2024-11236)
+- (Leak partial content of the heap through heap buffer over-read). (CVE-2024-8929)
+- (OOB access in ldap_escape). (CVE-2024-8932)
+
 * Thu Oct 24 2024 Cory McIntire <cory@cpanel.net> - 8.2.25-1
 - EA-12499: Update ea-php82 from v8.2.24 to v8.2.25
 
