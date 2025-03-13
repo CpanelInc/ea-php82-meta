@@ -11,7 +11,7 @@
 
 Summary:       Package that installs PHP 8.2
 Name:          %scl_name
-Version:       8.2.27
+Version:       8.2.28
 Vendor:        cPanel, Inc.
 # Doing release_prefix this way for Release allows for OBS-proof versioning, See EA-4590 for more details
 %define        release_prefix 1
@@ -178,6 +178,9 @@ mkdir -p %{buildroot}/opt/cpanel/%{scl}/root/usr/share/locale
 %{_root_sysconfdir}/rpm/macros.%{scl_name_base}-scldevel
 
 %changelog
+* Thu Mar 13 2025 Cory McIntire <cory.mcintire@webpros.com> - 8.2.28-1
+- EA-12772: Update ea-php82 from v8.2.27 to v8.2.28
+
 * Thu Dec 19 2024 Cory McIntire <cory@cpanel.net> - 8.2.27-1
 - EA-12617: Update ea-php82 from v8.2.26 to v8.2.27
 
